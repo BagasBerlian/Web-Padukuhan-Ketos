@@ -2,9 +2,11 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Beranda;
 use App\Filament\Pages\Dashboard as PagesDashboard;
 use App\Filament\Widgets\JumlahPendudukWidget;
 use App\Filament\Widgets\RingkasanStatsWidget;
+use Filament\Clusters\Cluster;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -36,6 +38,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
+            ->discoverClusters(app_path("Filament/Clusters"), 'App\\Filament\\Clusters')
             ->pages([
                 PagesDashboard::class,
             ])

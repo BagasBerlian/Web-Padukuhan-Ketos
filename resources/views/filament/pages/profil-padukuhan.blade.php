@@ -8,7 +8,7 @@
                 <x-filament::icon
                     icon="heroicon-m-check"
                     class="w-5 h-5 mr-2" />
-                Simpan Semua Perubahan
+                Simpan Profil Padukuhan
             </x-filament::button>
         </div>
     </form>
