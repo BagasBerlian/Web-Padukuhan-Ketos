@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Penduduks;
 
 use App\Filament\Resources\Penduduks\Pages\CreatePenduduk;
 use App\Filament\Resources\Penduduks\Pages\EditPenduduk;
+use App\Filament\Resources\Penduduks\Pages\ImportPenduduk;
 use App\Filament\Resources\Penduduks\Pages\ListPenduduks;
 use App\Filament\Resources\Penduduks\Pages\ViewPenduduk;
 use App\Filament\Resources\Penduduks\Schemas\PendudukForm;
@@ -59,6 +60,7 @@ class PendudukResource extends Resource
         return [
             'index' => ListPenduduks::route('/'),
             'create' => CreatePenduduk::route('/create'),
+            'import' => ImportPenduduk::route('/import'),
             'view' => ViewPenduduk::route('/{record}'),
             'edit' => EditPenduduk::route('/{record}/edit'),
         ];
